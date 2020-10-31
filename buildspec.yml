@@ -5,12 +5,11 @@ phases:
   install:
     commands:
         - echo lets start running nginx
-        - apt-get update -y
-        - apt-get install nginx -y
+        # - apt-get update -y
+        # - apt-get install nginx -y
 
     finally:
       - echo check if service running 
-      - systemctl restart nginx
   
   build:
     commands:
