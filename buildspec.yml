@@ -1,0 +1,24 @@
+version: 1.0
+
+env: 
+  variables:
+    ROOT_DIR: /var/www/html
+  
+phases:
+  install:
+    commands:
+        - echo lets start running nginx
+        - apt-get update -y
+        - apt-get install nginx -y
+
+    finally:
+      - echo check if service running 
+      - systemctl restart nginx
+  
+  build:
+    commands:
+      - echo start build phase
+    finally:
+      - echo finish this phase
+      
+  
