@@ -1,6 +1,7 @@
 version: 0.1
-
-env: 
+env:
+  variables:
+    ROOT_DIR: /var/www/html
 phases:
   install:
     commands:
